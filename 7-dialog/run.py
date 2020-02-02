@@ -20,11 +20,6 @@ class myFormNew(qw.QWidget, dialog_new.Ui_Form2):
         super().__init__()
         self.setupUi(self)
 
-    def show_w2(self):
-        print("ready to show a new dialog." )
-        self.show()
-
-
 if __name__ == '__main__':
     app = qw.QApplication(sys.argv)
     w1 = myForm()
@@ -33,7 +28,7 @@ if __name__ == '__main__':
     def show_w2():
         w2.show()
 
-    w1.pushButton.clicked.connect(w1.close_w1)
+    # w1.pushButton.clicked.connect(w1.close_w1)
     w1.pushButton.clicked.connect(show_w2)
 
     app.exec_()
