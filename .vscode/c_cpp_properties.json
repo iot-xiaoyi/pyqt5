@@ -1,0 +1,12 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "C:\\Users\\Administrator\\Desktop\\Arduino\\materials\\IDE\\arduino-1.6.5-r5\\portable\\packages\\esp8266\\tools\\**",
+                "C:\\Users\\Administrator\\Desktop\\Arduino\\materials\\IDE\\arduino-1.6.5-r5\\portable\\packages\\esp8266\\hardware\\esp8266\\2.0.0\\**"
+            ],
+            "forcedInclude": []
+        }
+    ]
+}
