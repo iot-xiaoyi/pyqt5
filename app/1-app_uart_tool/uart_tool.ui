@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>800</width>
-    <height>603</height>
+    <height>623</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -52,7 +52,7 @@
       <string>串口</string>
      </property>
     </widget>
-    <widget class="QComboBox" name="comboBox">
+    <widget class="QComboBox" name="comboBox_uart">
      <property name="geometry">
       <rect>
        <x>60</x>
@@ -75,7 +75,7 @@
       <string>波特率</string>
      </property>
     </widget>
-    <widget class="QComboBox" name="comboBox_2">
+    <widget class="QComboBox" name="comboBox_baud">
      <property name="geometry">
       <rect>
        <x>60</x>
@@ -84,8 +84,58 @@
        <height>22</height>
       </rect>
      </property>
+     <item>
+      <property name="text">
+       <string>2400</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>4800</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>9600</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>19200</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>38400</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>57600</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>115200</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>128000</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>256000</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>921600</string>
+      </property>
+     </item>
     </widget>
-    <widget class="QComboBox" name="comboBox_3">
+    <widget class="QComboBox" name="comboBox_databit">
      <property name="geometry">
       <rect>
        <x>60</x>
@@ -94,6 +144,26 @@
        <height>22</height>
       </rect>
      </property>
+     <item>
+      <property name="text">
+       <string>5</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>6</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>7</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>8</string>
+      </property>
+     </item>
     </widget>
     <widget class="QLabel" name="label_3">
      <property name="geometry">
@@ -108,7 +178,7 @@
       <string>数据位</string>
      </property>
     </widget>
-    <widget class="QComboBox" name="comboBox_4">
+    <widget class="QComboBox" name="comboBox_polarity">
      <property name="geometry">
       <rect>
        <x>60</x>
@@ -117,6 +187,21 @@
        <height>22</height>
       </rect>
      </property>
+     <item>
+      <property name="text">
+       <string>无</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>奇校验</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>偶校验</string>
+      </property>
+     </item>
     </widget>
     <widget class="QLabel" name="label_4">
      <property name="geometry">
@@ -131,7 +216,7 @@
       <string>校验位</string>
      </property>
     </widget>
-    <widget class="QComboBox" name="comboBox_5">
+    <widget class="QComboBox" name="comboBox_stopbit">
      <property name="geometry">
       <rect>
        <x>60</x>
@@ -140,6 +225,21 @@
        <height>22</height>
       </rect>
      </property>
+     <item>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1.5</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2</string>
+      </property>
+     </item>
     </widget>
     <widget class="QLabel" name="label_5">
      <property name="geometry">
@@ -154,7 +254,7 @@
       <string>停止位</string>
      </property>
     </widget>
-    <widget class="QComboBox" name="comboBox_6">
+    <widget class="QComboBox" name="comboBox_flow">
      <property name="geometry">
       <rect>
        <x>60</x>
@@ -163,6 +263,21 @@
        <height>22</height>
       </rect>
      </property>
+     <item>
+      <property name="text">
+       <string>无</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>RTS/CTS</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>XON/XOFF</string>
+      </property>
+     </item>
     </widget>
     <widget class="QLabel" name="label_6">
      <property name="geometry">
@@ -190,7 +305,7 @@
     <property name="title">
      <string>接收设置</string>
     </property>
-    <widget class="QRadioButton" name="radioButton">
+    <widget class="QRadioButton" name="radio_recv_ascii">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -203,7 +318,7 @@
       <string>ASCII</string>
      </property>
     </widget>
-    <widget class="QRadioButton" name="radioButton_2">
+    <widget class="QRadioButton" name="radio_recv_hex">
      <property name="geometry">
       <rect>
        <x>90</x>
@@ -268,7 +383,7 @@
     <property name="title">
      <string>发送设置</string>
     </property>
-    <widget class="QRadioButton" name="radioButton_3">
+    <widget class="QRadioButton" name="radio_send_hex">
      <property name="geometry">
       <rect>
        <x>90</x>
@@ -281,7 +396,7 @@
       <string>Hex</string>
      </property>
     </widget>
-    <widget class="QRadioButton" name="radioButton_4">
+    <widget class="QRadioButton" name="radio_send_ascii">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -331,7 +446,7 @@
      </property>
     </widget>
    </widget>
-   <widget class="QTextBrowser" name="textBrowser">
+   <widget class="QTextBrowser" name="textBrowser_recv">
     <property name="geometry">
      <rect>
       <x>180</x>
@@ -341,7 +456,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QTextBrowser" name="textBrowser_2">
+   <widget class="QTextEdit" name="textEdit_send">
     <property name="geometry">
      <rect>
       <x>180</x>
@@ -411,11 +526,6 @@
    <addaction name="action_exit"/>
    <addaction name="action_clear"/>
   </widget>
-  <action name="action_font">
-   <property name="text">
-    <string>字体</string>
-   </property>
-  </action>
   <action name="action_background">
    <property name="text">
     <string>背景颜色</string>
@@ -470,6 +580,11 @@
    </property>
    <property name="text">
     <string>清屏</string>
+   </property>
+  </action>
+  <action name="action_font">
+   <property name="text">
+    <string>字体</string>
    </property>
   </action>
  </widget>
