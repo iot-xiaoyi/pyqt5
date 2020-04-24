@@ -26,9 +26,8 @@ class myForm(qw.QMainWindow, ui_uart_tool.Ui_MainWindow):
         self.setWindowIcon(qg.QIcon("image/uart.ico"))
 
         #load settings
-        qc.QSettings()
         self.settings = qc.QSettings("config.ini", qc.QSettings.IniFormat)
-        self.com = self.settings.value("SETUP/COM_VALUE")
+        # self.com = self.settings.value("SETUP/COM_VALUE")
         self.baud = self.settings.value("SETUP/BAUD_VALUE", 0, type=int)
         self.databit = self.settings.value("SETUP/DATABIT_VALUE")
         self.polarity = self.settings.value("SETUP/POLARITY_VALUE")
