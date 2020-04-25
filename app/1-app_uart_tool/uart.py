@@ -10,8 +10,8 @@ class Uart(object):
         self.err = 0
         self.log = log
         self.list_cb = {}
-        self.recv_queue = queue.Queue(1)
-        self.send_queue = queue.Queue(1)
+        self.recv_queue = queue.Queue(10)
+        self.send_queue = queue.Queue(10)
 
         try:
             self.uart = serial.Serial(port, baud)
@@ -62,7 +62,7 @@ class Uart(object):
         self.run_status = 1
 
     def flush(self):
-        if self.recv_queue.full():
+        while not self.recv_queue.empty():
             self.recv_queue.get()
     
     def send_data_fun(self, data):
